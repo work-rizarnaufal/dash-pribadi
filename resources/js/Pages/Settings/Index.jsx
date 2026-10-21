@@ -3,6 +3,7 @@ import AppLayout from '@/Layouts/AppLayout';
 import Card from '@/Components/UI/Card';
 import Button from '@/Components/UI/Button';
 import Input from '@/Components/UI/Input';
+import { useToast } from '@/Context/ToastContext';
 import {
     Save,
     User,
@@ -15,10 +16,12 @@ import {
 
 export default function SettingsIndex() {
     const [saved, setSaved] = useState(false);
+    const { toast } = useToast();
 
     const handleSave = (e) => {
         e.preventDefault();
         setSaved(true);
+        toast.success('Pengaturan regional dan preferensi sistem berhasil disimpan!');
         setTimeout(() => setSaved(false), 3000);
     };
 

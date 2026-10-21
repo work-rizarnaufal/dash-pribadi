@@ -34,9 +34,9 @@ export default function Topbar({ collapsed, setCollapsed, setMobileOpen }) {
     };
 
     return (
-        <header className="sticky top-0 z-30 h-16 bg-white/85 backdrop-blur-md border-b border-[#E5E7EB] flex items-center justify-between px-4 sm:px-6">
+        <header className="sticky top-0 z-30 h-16 bg-white/85 backdrop-blur-md border-b border-[#E5E7EB] flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10">
             {/* Left Area: Toggle & Search */}
-            <div className="flex items-center gap-3 sm:gap-4 flex-1 max-w-xl">
+            <div className="flex items-center gap-3 sm:gap-4 flex-1 max-w-2xl">
                 {/* Mobile Hamburger */}
                 <button
                     type="button"

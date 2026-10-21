@@ -18,6 +18,10 @@ Route::get('/clients', function () {
     return Inertia::render('Freelance/Clients/Index');
 })->name('clients.index');
 
+Route::get('/projects', function () {
+    return Inertia::render('Freelance/Projects/Index');
+})->name('projects.index');
+
 Route::get('/tasks', function () {
     return Inertia::render('Freelance/Tasks/Index');
 })->name('tasks.index');

@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.jsx";
+@source "../js/**/*.js";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+
+@theme {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+    --color-surface: #F8F9FA;
+    --color-surface-canvas: #F9FAFB;
+    --color-surface-dim: #D9DADB;
+
+    --color-slate-950: #0B0F19;
+    --color-slate-900: #111827;
+
+    --color-growth: #10B981;
+    --color-growth-light: #ECFDF5;
+
+    --color-variance-negative: #EF4444;
+    --color-variance-negative-light: #FEF2F2;
+}
 
 @layer base {
     body {
@@ -18,3 +41,17 @@
     font-variant-numeric: tabular-nums;
 }
 
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-toast {
+    animation: toastIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
